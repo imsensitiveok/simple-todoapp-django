@@ -16,6 +16,7 @@ def add_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
+            print('task added')
             form.save()
 
     return redirect('index')
